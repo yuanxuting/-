@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: none;
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+            margin: 20px 0;
+        }
+    
+    </style>
+</head>
+<body>
+    <button id="show">显示</button>
+    <button id="hide">隐藏</button>
+    <div class="box" id="box"></div>
+    <script>
+        //获取div元素对象，并赋值给变量obox
+        var oBox = document.getElementById('box');
+
+        //获取显示按钮元素对象，并赋值给oShow
+        var oShow = document.getElementById('show');
+
+        //获取隐藏按钮元素对象，并赋值给oHide
+        var oHide = document.getElementById('hide');
+        
+        oShow.onclick = function(){
+            oBox.style.display = 'block';
+        }
+
+        oHide.onclick = function(){
+            oBox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

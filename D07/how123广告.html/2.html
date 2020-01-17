@@ -42,17 +42,17 @@
         </style>
     </head>
     <body>
-        <div class="ad">
-            <a href="#">
-                <img src="./images/dati.png" alt="答题有礼">
-            </a>
-            <span class="closeBtn" id="J_close"></span>
-        </div>
-        <script>
-            document.getElementById('J_close').onclick = function(){
-                document.getElementById('J_ad').style.display = 'none';
-            }
-        
-        </script>
+       <div class="ad" id="J_ad">
+           <a href="#">
+               <img src="./images/dati.png" alt="答题有礼">
+           </a>
+           <span class="closeBtn" id="J_closeBtn"></span>
+       </div>
+       <script>
+           document.getElementById('J_closeBtn').onclick = function(){
+               document.getElementById('J_ad').style.display = 'none';
+           }
+       </script>
+
     </body>
 </html>

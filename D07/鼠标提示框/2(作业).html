@@ -24,13 +24,22 @@
     </style>
 </head>
 <body>
-    <label for="rember" onmouseover="document.getElementById('J_tips').style.display = 'block'" onmouseout="document.getElementById('J_tips').style.display = 'none'">
-        <input id="rember" type="checkbox">记住密码
+    <label for="rember" id = 'J_rember'>
+        <input id="rember" type="checkbox">记住账号
     </label>
-   <div class="tips" id="J_tips">
+    <div class="tips" id = 'J_tips'>
         为了您的信息安全，请不要再公共电脑或网吧使用该功能！
-   </div>
+    </div>
+    <script>
+        document.getElementById('J_rember').onmouseout = function(){
+            document.getElementById('J_tips').style.display = 'none';
+        }
+
+        document.getElementById('J_rember').onmouseover = function(){
+            document.getElementById('J_tips').style.display = 'block';
+        }
     
+    </script>
     
 </body>
 </html>

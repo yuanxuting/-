@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <button id="btn">开灯/关灯</button>
+    <p>白天不懂夜的黑</p>
+    <script>
+        var oBtn = document.getElementById('btn');
+
+        var oBody = document.getElementById('body');
+
+        //给button元素绑定鼠标点击事件
+        oBtn.onclick = function(){
+            console.log(oBody.style.background);
+            if(oBody.style.background == "" || oBody.style.background == "white")
+            {
+                oBody.style.background = 'black';
+                oBody.style.color = 'white';
+                
+            }
+            else
+            {
+                oBody.style.background = 'white';
+                oBody.style.color = 'black';
+            }
+        }
+    
+    
+    </script>
+
+    
+</body>
+</html>
