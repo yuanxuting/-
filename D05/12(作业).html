@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+       .box1{
+           width: 100px;
+           height: 100px;
+           background-image: linear-gradient(red,yellow,blue);
+           position: relative;
+           border-radius: 50%;
+           animation: kouzi 2s infinite alternate;
+       }
+       @keyframes kouzi{
+           0%{
+               top: 0;
+               left: 0;
+           }
+
+           20%{
+               top: 400px;
+               left: 0;
+           }
+
+           40%{
+               top: 400px;
+               left: 200px;
+           }
+
+           60%{
+               top: 0;
+               left: 200px;
+           }
+
+           80%{
+               top: 0;
+               left: 0;
+           }
+        
+           90%{
+               top: 200px;
+               left: 0;
+           }
+          
+           100%{
+               top: 200px;
+               left: 200px;
+           }
+       }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    
+    
+    
+
+
+</body>
+</html>

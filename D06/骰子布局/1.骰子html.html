@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>富贵骰子</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box; /*怪异模式*/
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(#CC95C0,#DBD4B4,#7AA1D2);
+        }
+
+        .first-face,.second-face,.third-face,.four-face,.five-face,.six-face{
+            width: 104px;
+            height:104px;
+            background-image: linear-gradient(#EAD6EE,#CCFBFF);
+            border-radius: 10%;
+            margin: 15px;
+            padding: 10px;
+            box-shadow: 0 5px #fff inset,
+                        0 -5px #bbb inset,
+                        5px 0 #d7d7d7 inset,
+                        -5px 0 #d7d7d7 inset;
+
+        }
+
+        .dot{
+            display: flex;
+            width: 24px;
+            height: 24px;
+            background-color: rgb(75, 0, 130);
+            border-radius: 50%;
+            box-shadow: 0 3px rgb(102, 51, 153) inset,
+                        0 -3px rgb(102, 0, 150) inset;
+        }
+
+        .first-face{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .second-face{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .second-face span:nth-of-type(2){
+            align-self: flex-end;
+        }
+
+        .third-face{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .third-face span:nth-of-type(2){
+            align-self: center;
+        }
+
+        .third-face span:nth-of-type(3){
+            align-self: flex-end;
+        }
+
+        .four-face,.six-face{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .four-face .column,.six-face .column{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+
+       .five-face{
+           display: flex;
+           justify-content: space-between;
+       }
+
+       .five-face .column{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+       }
+
+       .five-face .column:nth-of-type(2){
+           align-self: center;
+       }
+      
+        
+
+       
+    </style>
+</head>
+<body>
+    <div class="first-face" >
+        <span class="dot"></span>
+    </div>
+    <div class="second-face">
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class="third-face">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class="four-face">
+        <div class="column">
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class="column">
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <div class="five-face">
+        <div class="column">
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class="column">
+            <span class="dot"></span>
+        </div>
+        <div class="column">
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <div class="six-face">
+        <div class="column">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class="column">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <div class=""></div>
+
+</body>
+</html>

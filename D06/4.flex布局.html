@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html,body{
+            height: 100%;
+        }
+
+        body{
+            /* 给容器设置flex布局 */
+            display: flex;
+            /* 主轴的对齐方式 */
+            justify-content: center;
+            /* 侧轴的对齐方式 */
+            align-items: center;
+        }
+        .box{
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                background-image: linear-gradient(red,yellow,blue);
+            }
+    
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

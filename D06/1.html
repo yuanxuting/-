@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .ball{
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(red,yellow,blue);
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .run-right-top{
+            animation: run-right 3s 0.4s 1 linear,run-top 3s 0.4s 1 cubic-bezier(.17,.67,.53,-0.12);
+            animation-fill-mode: forwards;
+        }
+
+        /* 向上加速运动 */
+        @keyframes run-top{
+            0%{
+                bottom: 40px;
+            }
+            100%{
+                bottom: 500px;
+            }
+        }
+
+        /* 向右匀速运动 */
+        @keyframes run-right{
+            0%{
+                left:40px;
+                transform: scale(0.7);
+            }
+
+            100%{
+                left: 700px;
+                transform: scale(0.3);
+            }
+        }
+    
+    
+    </style>
+
+</head>
+<body>
+    <div class="ball run-right-top"></div>
+</body>
+</html>

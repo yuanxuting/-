@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+        }
+        .pink{
+            height:400px;
+            width:240px;
+            background-color: pink;
+        }
+        .yellow{
+            height:400px;
+            width:240px;
+            background-color: yellow;
+        }
+        .blue{
+            height:600px;
+            width:550px;
+            background-color: turquoise;
+        }
+        @media screen and (max-width: 768px){
+            body{
+            height:100vh;
+            display:flex;
+            justify-content:space-between;
+        }
+        .pink{
+            height:400px;
+            width:500px;
+            background-color: pink;
+        }
+       .blue{
+            height:600px;
+            width:800px;
+            background-color: turquoise;
+        }
+        .yellow{
+            height:0;
+            width:0;
+        }
+    }
+        @media screen and (max-width: 480px){
+            body{
+            height:100vh;
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+
+        }
+        .pink{
+            height:480px;
+            width:1000px;
+            background-color: pink;
+        }
+        .blue{
+            height:480px;
+            width:1800px;
+            background-color: turquoise;
+
+        }
+        .yellow{
+            height:480px;
+            width:600px;
+            background-color: yellow;
+        }    
+    }
+    </style>
+</head>
+<body>
+
+    <div class="pink"></div>
+    <div class="blue"></div>
+    <div class="yellow"></div>
+</body>
+<html>
