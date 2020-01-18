@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label #rember{
+            cursor: pointer;
+        }
+        
+        .tips{
+            display: none;
+            width: 180px;
+            background-color: #fffde4;
+            border: 1px solid #dfb86d;
+            text-align: left;
+            padding: 5px 10px;
+            line-height: 18px;
+            color: #dc9632;
+            border-radius: 4px;
+            font-size: 12px; 
+        }
+    </style>
+    <script>
+        window.onload = function()
+        {
+            var oRember = document.getElementById('J_rember');
+
+            var oTips = document.getElementById('J_tips');
+        
+            oRember.onmouseout = function(){
+            oTips.style.display = 'none';
+            }
+
+            oRember.onmouseover = function(){
+            oTips.style.display = 'block';
+            }
+        }
+        
+    
+    </script>
+</head>
+<body>
+    <label for="rember" id = 'J_rember'>
+        <input id="rember" type="checkbox">记住账号
+    </label>
+    <div class="tips" id = 'J_tips'>
+        为了您的信息安全，请不要再公共电脑或网吧使用该功能！
+    </div>
+    
+    
+</body>
+</html> 
