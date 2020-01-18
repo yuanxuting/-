@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color: chartreuse;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="setStyle('background', 'red')">变背景颜色为红色</button>
+        <button onclick="setStyle('width', '100px')">变宽100px</button>
+        <button onclick="setStyle('height', '300px')">变高300px</button>
+        <button onclick="setStyle('fontSize', '40px')">变字体大小为40px</button>
+        <button onclick="setStyle('background', 'blue')">变背景颜色为蓝色</button>
+        <button onclick="setStyle('color', 'green')">变文本颜色为绿色</button>
+        <div class="box" id="box">box</div>
+        <script>
+            function setStyle(name, value){
+                document.getElementById('box').style[name] = value;
+            }
+        </script>
+    </body>
+</html>

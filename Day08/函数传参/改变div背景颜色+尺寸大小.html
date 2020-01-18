@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color: chartreuse;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="changeDiv('red', '300px', '300px');">变红 + 变宽300px + 变高300px</button>
+        <button onclick="changeDiv('green', '100px', '300px');">变绿 + 变宽100px + 变高300px</button>
+        <button onclick="changeDiv('yellow', '200px', '300px');">变黄 + 变高300px</button>
+        <button onclick="changeDiv('blue', '200px', '200px');">变蓝</button>
+        <div class="box" id="box"></div>
+        <script>
+            function changeDiv(color, width, height){
+                document.getElementById('box').style.background = color;
+                document.getElementById('box').style.width = width;
+                document.getElementById('box').style.height = height;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color: chartreuse;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="changeColor('red')">变红</button>
+        <button onclick="changeColor('green')">变绿</button>
+        <button onclick="changeColor('yellow')">变黄</button>
+        <div class="box" id="box"></div>
+        <script>S
+            function changeColor(color){
+                document.getElementById('box').style.background = color;
+            }
+        </script>
+    </body>
+</html>

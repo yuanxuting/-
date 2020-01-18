@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <button id="quanxuan">全选</button>
+    <button id="buxuan">不选</button>
+    <button id="fanxuan">反选</button>
+    <div id="inputs">
+        <input type="checkbox"> <br>
+        <input type="checkbox"> <br>
+        <input type="checkbox"> <br>
+        <input type="checkbox"> <br>
+        <input type="checkbox"> <br>
+        <input type="checkbox"> <br>
+        <input type="checkbox"> <br>
+        <input type="checkbox"> <br>
+        <input type="checkbox"> <br>
+        <input type="checkbox"> <br>
+        <input type="checkbox"> <br>
+        <input type="checkbox"> 
+    </div>
+    <hr>
+    <input type="checkbox">
+    <script>
+        //获取全选按钮元素对象，并赋值给变量oQx
+        var oQx = document.getElementById('quanxuan');
+
+        //获取不选按钮元素对象，并赋值给oBx
+        var oBx = document.getElementById('buxuan');
+
+        //獲取不選按鈕元素對象，并賦值給oFx
+        var oFx = document.getElementById('fanxuan');
+
+        //获取id=inputs的div元素对象，并赋值给变量oInputs
+        var oInputs = document.getElementById('inputs');
+
+        //获取oInputs对象下所有的input元素，并赋值给变量aInput
+        var aInput = oInputs.getElementsByTagName('input');
+
+        //给全选按钮元素绑定鼠标点击事件
+        oQx.onclick = function(){
+            for(var i = 0; i < aInput.length; i++)
+            {
+                aInput[i].checked = true;
+            }
+        }
+
+        //给不选按钮元素对象绑定鼠标点击事件
+        oBx.onclick = function(){
+            for(var i = 0; i < aInput.length; i++)
+            {
+                aInput[i].checked = false;
+            }
+        }
+
+        //给反选按钮元素对象绑定鼠标事件
+        oFx.onclick = function(){
+            for(var i = 0; i < aInput.length; i++)
+            {
+                if(aInput[i].checked == true)
+                {
+                    aInput[i].checked = false;
+                }
+                else
+                {
+                    aInput[i].checked = true;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
