@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="第一个数" id="numone">
+        <select id="oper">
+            <option value="+">+</option>
+            <option value="-" selected>-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" placeholder="第二个数" id="numtwo">
+        =
+        <input type="text" disabled id="result">
+        <!-- 这里给button设置type='button', 为了避免点击按钮的时候按照表单方式提交数据-->
+        <button type="button" id="btn">计算</button>
+    </form>
+    <script>
+        // 1、获取各个元素对象
+
+        // 获取第一个数的input对象，并赋值给变量oNumone
+        var oNumone = document.getElementById('numone');
+        
+        // 获取第二个数的input对象，并赋值给变量oNumtwo
+        var oNumtwo = document.getElementById('numtwo');
+
+        // 获取显示计算结果的input对象，并赋值给变量oResult
+        var oResult = document.getElementById('result');
+
+        // 获取运算符select元素对象，并赋值给变量oOper
+        var oOper = document.getElementById('oper');
+
+        // 获取计算按钮button对象，并赋值给变量oBtn
+        var oBtn = document.getElementById('btn');
+
+        // 2、给select元素绑定鼠标切换事件onchange
+
+        var sOper = "-";  // 声明一个存储运算符符号的sOper变量，默认是-
+
+        oOper.onchange= function(){
+
+            var index = oOper.options.selectedIndex;
+
+            console.log(oOper.options, index, oOper.options[index], oOper.options[index].value);
+           
+            sOper = oOper.options[index].value;
+
+        }
+
+        //3、 给计算按钮button绑定鼠标点击事件
+
+        oBtn.onclick = function(){
+
+            var result = 0; // 声明一个保存计算结果的变量result
+
+            // 3、实现计算过程
+
+            // 获取第一个数值，并赋值给变量sNumone
+
+            var sNumone = oNumone.value;
+
+            // 获取第二个数值，并赋值给变量sNumtwo
+            var sNumtwo = oNumtwo.value;
+
+            // 分别将第一个数和第二个数进行强制转换String->Number
+            var numone = parseFloat(sNumone);
+
+            var numtwo = parseFloat(sNumtwo);
+
+            // 根据用户选择的运算符符号进行逻辑判断
+            switch(sOper)
+            {
+                case "+": 
+                    result = numone + numtwo;
+                    break;
+                case "-": 
+                    result = numone - numtwo;
+                    break;
+                case "*": 
+                    result = numone * numtwo;
+                    break;
+                case "/": 
+                    if(sNumtwo == 0)
+                    {
+                        alert('被除数不能为0');
+                    }
+                    else
+                    {
+                        result = numone / numtwo;
+                        break;
+                    }
+            }
+
+            // console.log(result, typeof result)
+
+            // 4、显示计算结果
+
+            oResult.value = result;
+        }
+
+    </script>
+</body>
+</html>

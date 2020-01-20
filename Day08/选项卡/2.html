@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            .card{
+                margin: 100px;
+                width: 300px;
+            }
+
+            .card .title{
+                list-style: none;
+            }
+
+            .card .title li{
+                cursor: pointer;
+                float: left;
+                width: 100px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border: 1px solid #333;
+            }
+
+            .card .title li.active{
+                background-color: red;
+                color: #FFF;
+            }
+
+            .card div{
+                display: none;
+                clear: both;
+                width: 300px;
+                border: 1px solid #333;
+                height: 400px;
+            }
+
+            .card div.active{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card" id="J_card">
+            <ul class="title">
+                <li class="active">选项一</li>
+                <li>选项二</li>
+                <li>选项三</li>
+            </ul>
+            <div class="active">内容一</div>
+            <div>内容二</div>
+            <div>内容三</div>
+        </div>
+        <script>
+            // 获取选项卡元素对象，并赋值给变量oCard
+            var oCard = document.getElementById('J_card');
+
+            // 获取选项卡元素下的所有标题的li元素对象，并赋值给变量aLi
+            var aLi = oCard.getElementsByTagName('li');
+
+            // 获取选项卡元素下的所有内容的div元素对象，并赋值给变量aDiv数组
+            var aDiv = oCard.getElementsByTagName('div');
+
+            // 循环aLi
+            for(var i = 0; i < aLi.length; i++)
+            {
+                // 给所有的标题li元素添加index属性和属性值
+                aLi[i].index = i;
+
+                // 给所有的标题li元素绑定鼠标点击事件
+                aLi[i].onclick = function(){
+                    
+                    //1、标题的实现
+
+                    // 1.1 清空所有标题li元素的激活状态
+                    for(var j = 0; j < aLi.length; j++)
+                    {
+                        aLi[j].className = "";
+                    }
+
+                    // 1.2 激活当前选中的标题li元素（即this）
+                    this.className = "active";
+
+                    // 2、内容的实现
+
+                    // 2.1 隐藏所有的内容div元素
+                    for(var j = 0; j < aDiv.length; j++)
+                    {
+                        aDiv[j].className = "";
+                    }
+
+                    // 2.2 显示当前选中的li元素对应的内容div元素
+                    aDiv[this.index].className = "active";
+                }
+            }
+            
+        </script>
+    </body>
+</html>

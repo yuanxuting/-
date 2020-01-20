@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=scr, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //全局变量虽然好用但是不能滥用
+        
+        var x;//全局变量
+
+        function a(){
+            x = 10;
+        }
+
+        function b(){
+            console.log(x);
+        }
+
+        a();
+        b();
+    </script>
+</body>
+</html>

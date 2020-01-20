@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var bool = true;
+        //单分支语句
+        if(!bool)
+        {
+            console.log('True');
+        }
+        
+        //双分支语句
+        if(bool)
+        {
+            console.log('True');
+        }
+        else
+        {
+            console.log('False');
+        }
+
+        //多分支语句 if else if ...else
+        var time = new Date(); //实例化一个事件对象并赋值给time
+
+        var week = time.getDay();//返回今天是星期几（0~6）
+        console.log(week);
+
+        if(week == 0)
+        {
+            console.log('今天是星期天')
+        }
+        else if(week == 1){
+            console.log('今天星期一');
+        }
+        else if(week == 2){
+            console.log('今天星期二');
+        }
+        else if(week == 3){
+            console.log('今天星期三');
+        }
+        else if(week == 4){
+            console.log('今天星期四');
+        }
+        else if(week == 5){
+            console.log('今天星期五');
+        }
+        else if(week == 6){
+            console.log('今天星期六');
+        }
+        else
+        {
+            console.log(week);
+        }
+    </script>
+</body>
+</html>
